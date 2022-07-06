@@ -1,0 +1,113 @@
+:root{
+    --Brightorange: hsl(31, 77%, 52%);
+    --Darkcyan: hsl(184, 100%, 22%);
+    --Verydarkcyan: hsl(179, 100%, 13%);
+    --transparentwhite: hsla(0, 0%, 100%, 0.75);
+    --lightGray: hsl(0, 0%, 95%);
+    --lexend: 'Lexend Deca', sans-serif;
+    --bigShoulders: 'Big Shoulders Display', cursive;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+body{
+    font-size: 1.6rem;
+    background-color: var(--lightGray);
+}
+@media (min-width: 768px) {
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+.contenedor{
+    max-width: 120rem;
+    margin: 10rem auto 0 auto;
+    width: 90%;
+}
+a{
+    text-decoration: none;
+}
+/* Tarjetas */
+.cards{
+    margin-bottom: 10rem;
+}
+@media (min-width: 768px) {
+    .cards{
+        display:grid;
+        grid-template-columns: repeat(3,31rem);
+        place-content: center;
+    }
+}
+.card-1{
+    background-color: var(--Brightorange);
+    border-top-left-radius:1rem;
+    border-top-right-radius: 1rem;
+}
+@media (min-width: 768px) {
+    .card-1{
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 1rem;
+    }
+}
+.card-2{
+    background-color: var(--Darkcyan);
+}
+.card-3{
+    background-color: var(--Verydarkcyan);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+@media (min-width: 768px) {
+    .card-3{
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 1rem;
+    }
+}
+.card-1,.card-2,.card-3{
+    padding: 5rem 4rem;
+}
+.card__titulo{
+    font-family: var(--bigShoulders);
+    color:var(--lightGray);
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+.card__parrafo{
+    font-family: var(--lexend);
+    line-height: 1.8;
+    color:var(--transparentwhite);
+    margin-bottom: 4rem;
+}
+@media (min-width: 768px) {
+    .card__parrafo{
+        margin-bottom: 10rem;
+    }
+}
+.card__enlace{
+    padding: 1.5rem 4rem;
+    background-color: var(--lightGray);
+    border-radius: 3rem;
+    font-family: var(--lexend);
+}
+.card__enlace--naranja{
+    color:var(--Brightorange);
+}
+.card__enlace--cyan{
+    color:var(--Darkcyan);
+}
+.card__enlace--cyanDark{
+    color:var(--Verydarkcyan);
+}
